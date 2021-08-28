@@ -10,6 +10,7 @@ const sometimeWillHappen = () => {
 
 sometimeWillHappen()
     .then(response => console.log(response))
+    .then(console.log("managing 0"))
     .catch(err => console.err(err))
 
 const  sometimeWillHappen2 = () => {
@@ -28,9 +29,14 @@ const  sometimeWillHappen2 = () => {
 sometimeWillHappen2()
     .then(response => console.log(response))
     .then(console.log('managing..'))
+    .then(console.log("managing2"))
     .catch(err => console.err(err))
 
 // all prommises logic
+
+console.log("first")
+
+console.log("end")
 
 Promise.all([sometimeWillHappen(),sometimeWillHappen2()])
     .then(response => {
